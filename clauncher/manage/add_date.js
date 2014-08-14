@@ -7,5 +7,6 @@ casper.start("http://test.manage.c-launcher.com/AndroidDesktop/login", function(
 });
 casper.wait(1000, function() {
     this.capture('1.png');
+    console.log('capture ok');
 });
 casper.run();
