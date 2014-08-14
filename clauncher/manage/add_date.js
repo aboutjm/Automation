@@ -1,5 +1,5 @@
 casper.start("http://test.manage.c-launcher.com/AndroidDesktop/login", function() {
-    this.fillSelectors('form#contact-form', {
+    this.fillSelectors('form#loginForm', {
         'input[name="username"]':    'guanyujingmei',
         'input[name="password"]':    'guanyujingmei',
         'button[class="btn btn-large newLoginBtn"]': true
