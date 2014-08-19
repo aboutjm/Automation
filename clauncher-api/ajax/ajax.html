@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<script src="request.js"></script>
+	</head>
+	<body>
+		<script>
+			request.ajax({
+				url : 'http://localhost/do.php',
+				type : 'POST',
+				data : {a:123,b:234},
+				success : function(d){
+					console.log(d);
+				}
+			});
+		</script>
+	</body>
+</html>
