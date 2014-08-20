@@ -1,4 +1,6 @@
 html,body,ul,li,p,div{padding:0;margin:0;font-size:12px;}
-.request{width: 1000px;height:80px;overflow: hidden;margin:0 auto;}
-.show{width: 1000px;overflow: hidden;margin:0 auto;}
-.request p{display:block;width: 1000px;height: 20px;}
+.request{width: 800px;height:80px;overflow: hidden;margin:0 auto;}
+.show{width: 800px;overflow: hidden;margin:0 auto;}
+.request p{display:block;width: 800px;height: 20px;}
+.request input{display:block;float:left;}
+.requestRe{display:block;width: 70px;height: 20px;float:right;}

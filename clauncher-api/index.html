@@ -4,7 +4,8 @@
 	<title>clauncher-api</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="styles/css.css">
-	<script type="text/javascript" src="styles/js.js"></script>
+    <script type="text/javascript" src="styles/js.js"></script>
+    <script type="text/javascript" src="styles/event.js"></script>
 	<script type="text/javascript" src="ajax/request.js"></script>
 </head>
     <body>
@@ -27,9 +28,13 @@
     			<option value="/client/targetcountry/list.do">推广国家列表接口</option>
     		</select>
     		<i></i>
-    		<a href="#" id ="requestRe"></a>
+    		<a href="#" id ="requestRe" class="requestRe" >requestRe</a>
     		<p id="requestSh"></p>
     	</div>
     	<div class="show">展示</div>
+        <script>
+            var requestRe = document.getElementById('requestRe');
+            Event.add(requestRe,"click",inRequest);
+        </script>
     </body>
 </html>
