@@ -1,27 +1,16 @@
 casper.test.begin('Clauncher', 1, function suite(test) {
     casper.start("http://test.themes.c-launcher.com/", function() {
-        test.assertTitle("Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens", "Clauncher is ok");
+        test.assertTitle("Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens", "home is ok");
     });
     casper.then(function(){
     	this.capture('index.png');
-    });
-    casper.then(function(){
     	this.click('li.cyou-head-float-left a');
-    });
-    casper.then(function(){
-    	console.log('click ok,new location is' + this.getCurrentUrl());
-    });
-    casper.then(function(){
+        test.assertTitle("Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens", "home is ok");
     	this.clickLabel(' Themes ','a');
-    });
-    casper.then(function(){
-    	console.log('click ok,new location is' + this.getCurrentUrl());
-        
+        test.assertTitle("Download wonderful themes for your android phone -- Clauncher", "themes is ok");
+        this.capture('themes.png');
     });
     casper.back();
-    casper.then(function(){
-    	console.log('click ok,new location is' + this.getCurrentUrl());
-    });
     casper.run(function() {
         test.done();
     });
