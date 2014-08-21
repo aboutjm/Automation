@@ -16,9 +16,19 @@ function inRequest(){
 		}
 	});
 }
-function paSetting(){
-	setting.style = "display: block;";
+function settingOver(){
+	setting.style.display = "block";
 }
+function settingOut(){
+	setting.style.display = "none";
+}
+function inSet(){
+	var a
+	//checked="checked"
+}
+
+
+
 
 
 //localVersions={“packageName”:versionCode,...}
