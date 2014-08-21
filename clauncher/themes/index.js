@@ -4,7 +4,6 @@ casper.test.begin('Clauncher', 1, function suite(test) {
         test.assertTitle("Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens", "Clauncher is ok");
     });
     casper.then(function(){
-        test1();
     	this.capture('index.png');
     });
     casper.then(function(){
