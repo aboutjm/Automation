@@ -1,5 +1,4 @@
 function inUrl(){
-	console.log("inUrl");
 	var requestEn = document.getElementById('requestEn');
 	var requestIn = document.getElementById('requestIn');
 	var requestSh = document.getElementById('requestSh');
@@ -8,7 +7,6 @@ function inUrl(){
 	return requestUrl;
 }
 function inRequest(){
-	console.log("request");
 	var requestUrl = inUrl();
 	request.ajax({
 		url : requestUrl,
@@ -17,4 +15,7 @@ function inRequest(){
 			console.log(d);
 		}
 	});
+}
+function parametersSetting(){
+	parametersSetting.style="display: block;";
 }

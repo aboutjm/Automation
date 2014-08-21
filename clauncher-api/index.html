@@ -27,7 +27,105 @@
     			<option value="/client/theme/newest/hottestByType.do">主题分类最热接口</option>
     			<option value="/client/targetcountry/list.do">推广国家列表接口</option>
     		</select>
-    		<i></i>
+            <a href="#" class = "icon" id="parametersSetting"><i></i></a>
+            <div class="parametersSetting" style="display: none;">
+                <span class="tip-arrow" style="left: 7px;">
+                </span>
+                <div class="">
+                    <div class="parametersBox">
+                        <div class="parametersName">country</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="1"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">channelId</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="2"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">auditTime</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="3"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">density</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="4"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">downloads</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="5"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">iconName</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="6"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">id</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="7"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">local</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="8"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">language</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="9"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">weight</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="10"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">version</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="11"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">type</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="12"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">themeId</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="13"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">themeAreaId</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="14"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">sdkVersion</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="15"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">recommendTime</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="16"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">paperId</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="17"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">pageSize</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="18"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">packageName</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="19"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">orderNum</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="20"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName">localVersions</div>
+                        <div class="checkBox"><input type="checkbox" checked="checked"columnindex="21"></div>
+                    </div>
+                </div>
+                <div class="grid-setting-btns-container">
+                    <button type="button" class="setting" title="点击进行设置">
+                        <i class="iconWrench icon-white"></i>&nbsp;设置
+                    </button>
+                    <button type="button" class="closeSetting" title="点击关闭设置框">
+                        <i class="iconRemove icon-white"></i>&nbsp;关闭
+                    </button>
+                </div>
+            </div>
     		<a href="#" id ="requestRe" class="requestRe" >requestRe</a>
     		<p id="requestSh"></p>
     	</div>
@@ -35,6 +133,8 @@
         <script>
             var requestRe = document.getElementById('requestRe');
             Event.add(requestRe,"click",inRequest);
+            var parametersSetting = document.getElementById("parametersSetting");
+            Event.add(parametersSetting,"click",parametersSetting);
         </script>
     </body>
 </html>
