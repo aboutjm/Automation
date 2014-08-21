@@ -1,4 +1,3 @@
-var test1 = require('./test.js');
 casper.test.begin('Clauncher', 1, function suite(test) {
     casper.start("http://test.themes.c-launcher.com/", function() {
         test.assertTitle("Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens", "Clauncher is ok");
