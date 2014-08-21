@@ -16,6 +16,9 @@ function inRequest(){
 		}
 	});
 }
-function parametersSetting(){
-	parametersSetting.style="display: block;";
+function paSetting(){
+	setting.style = "display: block;";
 }
+
+
+//localVersions={“packageName”:versionCode,...}

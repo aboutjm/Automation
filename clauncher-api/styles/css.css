@@ -8,8 +8,10 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	-webkit-border-bottom-left-radius:4px;
 	-moz-border-radius-bottomleft:4px;
 	border-bottom-left-radius:4px;
-	float: left;
+	width:15px;height:15px;
+	background-color: #D6305E;
 	display:block;
+	float: left;
 }
 .request{width: 800px;height:80px;overflow: hidden;margin:0 auto;}
 .show{width: 800px;overflow: hidden;margin:0 auto;}
@@ -19,11 +21,11 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 .parametersSetting{
 	position: absolute;
 	z-index: 1001;
-	top:45px;
-	left:5px;
-	width:350px;
+	top:30px;
+	left:40%;
+	width:320px;
 	max-height:420px;
-	padding:10px;
+	padding:1px;
 	border:solid 1px #a5a5a5;
 	background-color: #DDDDDD;
 	font-size: 12px;
@@ -33,26 +35,28 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.3);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.3);
 	box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	float: left;
 }
 .parametersName{
-	float: left;
-	width:100px;
-	height:30px;
+	width:90px;
+	height:20px;
 	padding:0px 10px 0px 10px;
 	font-weight: bold;
 	text-align: right;
 	line-height: 30px;
+	float: left;
 }
 .checkBox{
-	float: left;
-	width:100px;
-	height:30px;
+	width:30px;
+	height:20px;
 	padding:0px 10px 0px 10px;
 	font-weight: bold;
 	text-align: right;
 	line-height: 30px;
+	float: left;
 }
-.grid-search-btns-container,.grid-setting-btns-container{
+.settingContainer{
+	margin-top: 10px;
 	padding:10px;
 	border-top:solid 5px #BBBBBB;
 	background-color: #CCCCCC;
@@ -64,3 +68,4 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	-moz-border-bottom-left-radius:10px;
 	-moz-border-bottom-right-radius:10px;
 }
+.pBox{overflow: hidden;}
