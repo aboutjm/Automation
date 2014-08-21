@@ -21,7 +21,7 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 }
 .request{width: 800px;height:80px;overflow: hidden;margin:0 auto;}
 .show{width: 800px;overflow: hidden;margin:0 auto;}
-.request p{display:block;width: 800px;height: 20px;overflow: hidden;}
+.urlList{display:block;width: 800px;height: 20px;overflow: hidden;}
 .requestEn{display:block;height:25px;float:left;}
 .requestIn{display:block;height:25px;float:left;}
 .requestRe{display:block;width: 70px;height: 20px;float:right;}
@@ -29,7 +29,7 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	position: absolute;
 	z-index: 1001;
 	top:20px;
-	left:40%;
+	left:35%;
 	width:320px;
 	max-height:420px;
 	padding:1px;
@@ -81,10 +81,14 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	float: left;
 }
 .parameters p{
+	margin-top: 10px;
+	display: inline-block;
 	height: 20px;
 	float: left;
 }
 .parameters input{
-	height: 20px;
+	margin-top: 10px;
+	width: 50px;
+	height: 10px;
 	float: left;
 }
