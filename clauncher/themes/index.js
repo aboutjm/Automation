@@ -1,4 +1,4 @@
-casper.test.begin('Clauncher', 1, function suite(test) {
+casper.test.begin('Clauncher', 3, function suite(test) {
     casper.start("http://test.themes.c-launcher.com/", function() {
         test.assertTitle("Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens", "home is ok");
     });
