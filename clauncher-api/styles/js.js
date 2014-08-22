@@ -1,3 +1,4 @@
+document.domain = "c-launcher.com";
 function inUrl(){
 	var requestEn = document.getElementById('requestEn');
 	var requestIn = document.getElementById('requestIn');
@@ -55,8 +56,9 @@ function checkBoxClick(){
 	
 }
 function inSet(){
+	parameters.innerHTML = "";
     var parametersName = document.getElementsByClassName("parametersName");
-	for(var i = 0 ;i<parametersName.length;i++){
+	for(var i = 0 , leng = parametersName.length;i<leng;i++){
 		if(parametersName[i].getAttribute('value') === "1"){
 			var date = parametersName[i].innerHTML;
 			addEl(date);
