@@ -95,18 +95,24 @@ function pullPar(){
 */
 //获取数据查分数据
 function getDate(n){
+	console.log(n);
 	var date = n;
+	console.log(date);
 	var uDate = date["data"];
+	console.log(uDate);
 	var keys1 =[];
 	for(var key in uDate){
 	   keys1.push(key);
 	}
+	console.log(keys1);
 	var s=keys1[0];
 	var lDate = uDate[s];
+	console.log(lDate);
 	var keys2 =[];
 	for(var key in lDate){
 	   keys2.push(key);
 	}
+	console.log(keys2);
 	//创建样式
 	function showFu(){
 		//表头
