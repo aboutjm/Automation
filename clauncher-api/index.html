@@ -127,13 +127,16 @@
     		<a href="#" id ="requestRe" class="requestRe" >requestRe</a>
     		<p id="requestSh" class = "urlList"></p>
     	</div>
-    	<div class="show">展示</div>
+    	<div class="show" id = "show">
+            <p>展示</p>
+        </div>
         <script>
             var requestRe = document.getElementById('requestRe');
             Event.add(requestRe,"click",inRequest);
             var parametersSetting = document.getElementById("parametersSetting");
             var setting = document.getElementById("setting");
             var set = document.getElementById("set");
+            var show = document.getElementById("show");
             Event.add(parametersSetting,"mouseover",settingOver);
             Event.add(parametersSetting,"mouseout",settingOut);
             Event.add(setting,"mouseover",settingOver);
