@@ -102,7 +102,8 @@ function getDate(n){
 	console.log(uDate);
 	var keys1 =[];
 	for(var key in uDate){
-	   keys1.push(key);
+		console.log(key);
+		keys1.push(key);
 	}
 	console.log(keys1);
 	var s=keys1[0];
@@ -110,7 +111,8 @@ function getDate(n){
 	console.log(lDate);
 	var keys2 =[];
 	for(var key in lDate){
-	   keys2.push(key);
+		console.log(key);
+		keys2.push(key);
 	}
 	console.log(keys2);
 	//创建样式
