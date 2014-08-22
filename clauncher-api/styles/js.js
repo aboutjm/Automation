@@ -96,7 +96,7 @@ function pullPar(){
 //获取数据查分数据
 function getDate(n){
 	console.log(n);
-	var date = n;
+	var date =  JSON.parse(n);
 	console.log(date);
 	var uDate = date["data"];
 	console.log(uDate);
