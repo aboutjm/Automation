@@ -101,7 +101,8 @@ function getDate(n){
 	for(var key in uDate){
 	   keys1.push(key);
 	}
-	var lDate = uDate[keys1[0]];
+	var s=keys1[0];
+	var lDate = uDate[s];
 	var keys2 =[];
 	for(var key in lDate){
 	   keys2.push(key);
@@ -121,10 +122,13 @@ function getDate(n){
 			for(var y=0,leng=keys2.length;y<leng;y++){
 				var li =document.createElement("li");
 				ul.appendChild(li);
-				li.innerHTML = lDate[x][keys2[y]];
+				var t=keys2[y];
+				var u=lDate[x];
+				li.innerHTML = u[t];
 			}
 		}
 	}
+	showFu();
 }
 
 
