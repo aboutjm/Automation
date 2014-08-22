@@ -95,22 +95,17 @@ function pullPar(){
 */
 //获取数据查分数据
 function getDate(n){
-	console.log(n);
 	var date =  JSON.parse(n);
-	console.log(date);
 	var uDate = date["data"];
-	console.log(uDate);
 	var keys1 =[];
 	for(var key in uDate){
-		console.log(key);
 		keys1.push(key);
 	}
-	console.log(keys1);
 	var s=keys1[0];
 	var lDate = uDate[s];
 	console.log(lDate);
 	var keys2 =[];
-	for(var key in lDate){
+	for(var key in lDate[0]){
 		console.log(key);
 		keys2.push(key);
 	}
