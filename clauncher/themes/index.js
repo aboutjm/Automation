@@ -1,4 +1,4 @@
-casper.test.begin('Clauncher', 3, function suite(test) {
+casper.test.begin('Clauncher', 4, function suite(test) {
     casper.start("http://test.themes.c-launcher.com/", function() {
         test.assertTitle("Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens", "home is ok");
     });
@@ -21,6 +21,25 @@ casper.test.begin('Clauncher', 3, function suite(test) {
         this.capture('themes.png');
     });
     casper.back();
+    casper.then(function(){ 
+        this.clickLabel(' Wallpapers ','a');
+    });
+    casper.then(function(){
+        test.assertTitle("Download free wallpapers for your android phone -- Clauncher", "Wallpapers is ok");
+    });
+    casper.then(function(){
+        this.capture('Wallpapers.png');
+    });
+    casper.back();
+    casper.then(function(){ 
+        this.clickLabel(' Design Themes ','a');
+    });
+    casper.then(function(){
+        test.assertTitle("Design android themes -- personalize your phone--Clauncher", "designer is ok");
+    });
+    casper.then(function(){
+        this.capture('designer.png');
+    });
     casper.run(function() {
         test.done();
     });
