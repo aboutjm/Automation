@@ -1,4 +1,5 @@
 html,body,ul,li,p,div{padding:0;margin:0;font-size:12px;}
+ul{list-style-type:none;padding:50px;}
 input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],input[type="button"],input[type="radio"],input[type="checkbox"]{width:auto;}
 .icon{
 	margin:5px;
@@ -22,8 +23,8 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 .request{width: 800px;height:80px;overflow: hidden;margin:0 auto;}
 .show{width: 800px;overflow: hidden;margin:0 auto;}
 .show div{width: 100px;height: 30px;border: solid 1px gray;background-color: #ffffff;color: #303030;float: left;}
-.show ul{overflow: hidden;}
-.show li{width: 100px;height: 30px;border: solid 1px #CCCCCC;background-color: #EEEEEE;color: #303030;font-size: 14px;float: left;}
+.show ul{overflow: hidden;display: block;}
+.show li{width: 100px;height: 30px;display: block;border: solid 1px #CCCCCC;background-color: #EEEEEE;color: #303030;font-size: 14px;float: left;}
 .urlList{display:block;width: 800px;height: 20px;overflow: hidden;}
 .requestEn{display:block;height:25px;float:left;}
 .requestIn{display:block;height:25px;float:left;}

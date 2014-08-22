@@ -103,13 +103,10 @@ function getDate(n){
 	}
 	var s=keys1[0];
 	var lDate = uDate[s];
-	console.log(lDate);
 	var keys2 =[];
 	for(var key in lDate[0]){
-		console.log(key);
 		keys2.push(key);
 	}
-	console.log(keys2);
 	//创建样式
 	function showFu(){
 		//表头
