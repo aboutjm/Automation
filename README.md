@@ -1,4 +1,0 @@
-Automation
-==========
-
-testAutomation
