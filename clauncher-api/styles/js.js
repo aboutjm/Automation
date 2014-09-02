@@ -110,9 +110,14 @@ function getDate(n){
 	}
 	var lDate = uDate[s];
 	var keys2 =[];
-	for(var key in lDate[0]){
-		keys2.push(key);
+	if(typeof lDate[0] ==="object"){
+		for(var key in lDate[0]){
+			keys2.push(key);
+		}
+	}else{
+		keys2=s;
 	}
+
 	//创建样式
 	function showFu(){
 		//表头
@@ -134,9 +139,26 @@ function getDate(n){
 			}
 		}
 	}
+	function showFuString(){
+		var div =document.createElement("div");
+		show.appendChild(div);
+		div.innerHTML = keys2;
+		for(var x=0,len=lDate.length;x<len;x++){
+			var ul =document.createElement("ul");
+			show.appendChild(ul);
+			var li =document.createElement("li");
+			ul.appendChild(li);
+			var u=lDate[x];
+			li.innerHTML = u;
+		}
+	}
 	if(uDate["code"]===100){
 		show.innerHTML = "<p>展示</p>";
-		showFu();
+		if(keys2!==s){
+			showFu();
+		}else{
+			showFuString();
+		}
 	}else{
 		show.innerHTML = "code"+uDate["code"];
 	}
@@ -161,6 +183,6 @@ function getDate(n){
 	for(var a=0;a<d.length;a++){
 		add();
 	};
-	数据结构
+	数据结构typeof
 	var json ={"data":{"typeList":[{"name":"Animalstest","description":"It is much more common to pull TTL inputs up3","type":87,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/586/53bfa8c80cf2d9a1c7dc8da2/default_1407757587592.png"},{"name":"Animalstest","description":"Introduction to TTL series IC and basic electronic devices","type":23,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/283/530edb290cf23d54d0c6acdb/default_1404894441351.png"},{"name":"hi.hello Android","description":"The control simulation console converted 27V electrical signal into TTL electrical signal","type":22,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/354/530edb210cf23d54d0c6acda/icon_1397417597697.jpg"},{"name":"Cars","description":"","type":24,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/828/530edb320cf23d54d0c6acdc/default_1407378992027.jpg"},{"name":"Food&Drink","description":"","type":25,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/445/530edb330cf23d54d0c6acdd/icon_1402975438488.png"},{"name":"Cartoon & Anime","description":"cute","type":26,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/990/530edb3c0cf23d54d0c6acde/default_1407439711610.jpeg"},{"name":"Celebrity","description":"","type":27,"typeIcon":""},{"name":"Festive","description":"","type":28,"typeIcon":""},{"name":"Games","description":"","type":29,"typeIcon":""},{"name":"Lifestyle & Arts","description":"","type":30,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/554/530edb5f0cf23d54d0c6ace2/icon_1397448694461.jpg"},{"name":"Love & Romance","description":"","type":31,"typeIcon":""},{"name":"Movies & TV","description":"","type":32,"typeIcon":""},{"name":"Music","description":"","type":33,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/805/530edb7b0cf23d54d0c6ace5/icon_1397505061324.jpg"},{"name":"Nature","description":"","type":34,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/582/530edb860cf23d54d0c6ace6/icon_1397448708945.jpg"},{"name":"People","description":"","type":35,"typeIcon":""},{"name":"Religion & Myth","description":"","type":36,"typeIcon":""},{"name":"Science & Technology","description":"","type":37,"typeIcon":""},{"name":"Sexy","description":"","type":38,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/378/530edbab0cf23d54d0c6acea/icon_1397505098781.jpg"},{"name":"Sports","description":"","type":39,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/691/530edbb20cf23d54d0c6aceb/icon_1397449375965.jpg"},{"name":"Life","description":"Life Show ~","type":78,"typeIcon":""},{"name":"World Cup","description":"We will ~ We Will ~ rock uWe will ~ We Will ~ rock uWe will ~ We Will ~ rock uWe will ~ We Will ~ rock uWe will ~ We Will ~ rock uWe will ~ We Will ~ rock uWe will ~ We Will ~ rock uWe will ~ We Will ~ rock uWe will ~ We Will ~ rock u","type":79,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/576/539a6af90cf2d42ed16ce0b0/default_1404713168221.jpg"},{"name":"Test","description":"test","type":86,"typeIcon":"http://test.designer.c-launcher.com/resources/categoryicon/0/73/53bcfd050cf2ba0f75a0b911/default_1404894475821.jpg"}],"code":100}} 
 */
