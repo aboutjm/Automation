@@ -11,8 +11,8 @@
     <body>
     	<div class="request">
     		<select id="requestEn" style="width: 70px;" name="requestEn" class="requestEn">
+                <option value="test.">测试服</option>
     			<option value="">正式服</option>
-    			<option value="test.">测试服</option>
     		</select>
     		<select id="requestIn" style="width: 150px;" name="requestIn" class="requestIn">
     			<option value="/client/home/get.do">首页数据接口</option>
@@ -25,7 +25,8 @@
     			<option value="/client/theme/newest/hottest.do">主题最热接口</option>
     			<option value="/client/theme/newest/lastestByType.do">主题分类最新接口</option>
     			<option value="/client/theme/newest/hottestByType.do">主题分类最热接口</option>
-    			<option value="/client/targetcountry/list.do">推广国家列表接口</option>
+                <option value="/client/targetcountry/list.do">推广国家列表接口</option>
+                <option value="/client/themesearch/hotwords.do">搜索热词列表接口</option>
     		</select>
             <i class = "icon" id="parametersSetting"></i>
             <div class="parametersSetting" id = "setting" style = "display: none;" >
@@ -115,6 +116,10 @@
                     <div class="parametersBox">
                         <div class="parametersName" value="0">localVersions</div>
                         <div class="checkBox"><input type="checkbox" columnindex="21"></div>
+                    </div>
+                    <div class="parametersBox">
+                        <div class="parametersName" value="0">size</div>
+                        <div class="checkBox"><input type="checkbox" columnindex="22"></div>
                     </div>
                 </div>
                 <div class="settingContainer">
