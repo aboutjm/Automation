@@ -102,7 +102,12 @@ function getDate(n){
 	for(var key in uDate){
 		keys1.push(key);
 	}
-	var s=keys1[0];
+	var s;
+	if(keys1[0] !== "code"){
+		s=keys1[0];
+	}else{
+		s=keys1[1];
+	}
 	var lDate = uDate[s];
 	var keys2 =[];
 	for(var key in lDate[0]){
