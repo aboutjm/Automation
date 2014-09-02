@@ -130,6 +130,7 @@ function getDate(n){
 		}
 	}
 	if(uDate["code"]===100){
+		show.innerHTML = "<p>展示</p>";
 		showFu();
 	}else{
 		show.innerHTML = "code"+uDate["code"];
