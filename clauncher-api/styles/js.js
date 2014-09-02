@@ -95,6 +95,7 @@ function pullPar(){
 */
 //获取数据查分数据
 function getDate(n){
+	show.innerHTML ="";
 	var date =  JSON.parse(n);
 	var uDate = date["data"];
 	var keys1 =[];
@@ -128,7 +129,11 @@ function getDate(n){
 			}
 		}
 	}
-	showFu();
+	if(uDate["code"]===100){
+		showFu();
+	}else{
+		show.innerHTML = "code"+uDate["code"];
+	}
 }
 
 
