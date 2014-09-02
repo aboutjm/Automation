@@ -110,14 +110,15 @@ function getDate(n){
 	}
 	var lDate = uDate[s];
 	var keys2 =[];
-	if(typeof lDate[0] ==="object"){
-		for(var key in lDate[0]){
-			keys2.push(key);
+	function key2Fu(){
+		if(typeof lDate[0] ==="object"){
+			for(var key in lDate[0]){
+				keys2.push(key);
+			}
+		}else{
+			keys2=s;
 		}
-	}else{
-		keys2=s;
 	}
-
 	//创建样式
 	function showFu(){
 		//表头
@@ -154,6 +155,7 @@ function getDate(n){
 	}
 	if(uDate["code"]===100){
 		show.innerHTML = "<p>展示</p>";
+		key2Fu();
 		if(keys2!==s){
 			showFu();
 		}else{
