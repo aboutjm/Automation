@@ -22,16 +22,31 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 }
 .request{width: 800px;height:80px;overflow: hidden;margin:0 auto;}
 .show{width: 800px;overflow: hidden;margin:0 auto;}
-.show div{width: 100px;height: 30px;border: solid 1px gray;background-color: #605b69;color: #303030;float: left;}
+.show div{
+	width: 100px;
+	height: 20px;
+	border: solid 1px gray;
+	background-color: #605b69;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	width:15px;height:15px;
+	color: #303030;
+	font-size: 14px;
+	float: left;
+}
 .show ul{width:800px;overflow: hidden;display: block;}
 .show li{
 	width: 100px;
-	height: 30px;
+	height: 20px;
 	display: block;
 	border: solid 1px #CCCCCC;
 	background-color: #EEEEEE;
 	color: #303030;
-	font-size: 14px;
+	font-size: 12px;
 	float: left;
 	text-overflow: ellipsis;
 }

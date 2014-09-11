@@ -127,6 +127,11 @@
                         <i class="iconWrench icon-white"></i>&nbsp;设置
                     </button>
                 </div>
+                <div class="settingContainer">
+                    <button type="button" id = "settingClose" class="setting" title="点击关闭">
+                        <i class="iconWrench icon-white"></i>&nbsp;关闭
+                    </button>
+                </div>
             </div>
             <div id="parameters" class ="parameters" ></div>
     		<a href="#" id ="requestRe" class="requestRe" >requestRe</a>
@@ -141,11 +146,14 @@
             var parametersSetting = document.getElementById("parametersSetting");
             var setting = document.getElementById("setting");
             var set = document.getElementById("set");
-            var show = document.getElementById("show");
-            Event.add(parametersSetting,"mouseover",settingOver);
-            Event.add(parametersSetting,"mouseout",settingOut);
-            Event.add(setting,"mouseover",settingOver);
-            Event.add(setting,"mouseout",settingOut);
+            var set = document.getElementById("set");
+            var settingClose = document.getElementById("settingClose");
+            //Event.add(parametersSetting,"mouseover",settingOver);
+            //Event.add(parametersSetting,"mouseout",settingOut);
+            //Event.add(setting,"mouseover",settingOver);
+            //Event.add(setting,"mouseout",settingOut);
+            Event.add(parametersSetting,"click",settingOver);
+            Event.add(settingClose,"click",settingOut);
             Event.add(set,"click",inSet);
             checkBoxClick();
         </script>
