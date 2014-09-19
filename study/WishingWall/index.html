@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>徐家许愿墙@盈盈</title>
-<meta charset="utf-8" />
-</head>
+	<head>
+		<title>徐家许愿墙@盈盈</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="styles/css.css">
+	    <script type="text/javascript" src="styles/js.js"></script>
+    	<script type="text/javascript" src="styles/event.js"></script>
+	</head>
     <body>
-    	<div id="" class=""></div>
-    	<div id="" class="">
+    	<div id="wall" class="wall"></div>
+    	<div class="desire">
     		<p>愿望</p>
-    		<input>
-    		<a href="#" id="" class="">确定</a>
+    		<input id="desire">
+    		<div id="confirm" class="con1">确定</div>
     	</div>
+    	<script>
+    		var wall = document.getElementById("wall");
+    		var desire = document.getElementById("desire");
+    		var confirm = document.getElementById("confirm");
+            Event.add(confirm,"click",wishing);
+            Event.add(confirm,"click",wishing);
+    	</script>
     </body>
 </html>
