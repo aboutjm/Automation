@@ -1,4 +1,4 @@
-casper.start('http://foo.bar/').then(function() {
+casper.start('http://test.themes.c-launcher.com/').then(function() {
     this.test.assertTitle('Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens');
     this.clickLabel(' Design Themes ', 'a');
 });
