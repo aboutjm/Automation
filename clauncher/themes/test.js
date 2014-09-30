@@ -1,9 +1,9 @@
 casper.start('http://test.themes.c-launcher.com/').then(function() {
-    this.test.assertTitle('Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens');
+    this.echo(this.getTitle());
     this.clickLabel(' Design Themes ', 'a');
 });
 casper.then(function() {
-    this.test.assertTitle('Design android themes -- personalize your phone--Clauncher');
+    this.echo(this.getTitle(), 'ERROR');
 });
 casper.run();
 /*尝试的第四个*//*
