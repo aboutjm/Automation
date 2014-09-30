@@ -21,7 +21,7 @@ var casper = require('casper').create();
     };
 })(casper);
 
-casper.start("http://test.themes.c-launcher.com/").newTab("http://www.baidu.com/", function(){
+casper.start("http://www.baidu.com/").newTab("http://test.themes.c-launcher.com/", function(){
     // this is casper2
     this.echo(this.getCurrentUrl(), this.getTitle());
     this.capture("casper2_1.png");
