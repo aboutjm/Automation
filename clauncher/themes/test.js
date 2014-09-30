@@ -4,11 +4,11 @@ casper.test.begin('Clauncher', 2, function suite(test) {
     });
     casper.then(function(){
         this.clickLabel(' Design Themes ', 'a');
-        this.echo(this.getHTML());
+        this.echo(this.getTitle());
     });
     casper.waitForPopup(/test.designer.c-launcher.com/, capture);
     function capture(){
-        this.echo(this.getHTML());
+        this.echo(this.getTitle());
         this.test.assertEquals(this.popups.length, 1);
         this.capture("screen4.png"); 
     };
