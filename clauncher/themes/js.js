@@ -25,7 +25,7 @@ casper.start("http://www.baidu.com/").newTab("http://test.themes.c-launcher.com/
     // this is casper2
     this.echo(this.getCurrentUrl(), this.getTitle());
     this.capture("casper2_1.png");
-    this.thenClick(' Design Themes ', 'a');
+    this.clickLabel(' Design Themes ', 'a');
     this.then(function(){
         this.echo(this.getCurrentUrl(), this.getTitle());
         this.capture("casper2_2.png");
