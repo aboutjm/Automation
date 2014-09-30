@@ -162,7 +162,7 @@ function getDate(n){
 			showFuString();
 		}
 	}else{
-		show.innerHTML = "code"+uDate["code"];
+		show.innerHTML = "code"+uDate["code"]+"备注：101=无结果；102=参数错误；103=程序异常。";
 	}
 }
 
