@@ -1,3 +1,12 @@
+casper.start('http://foo.bar/').then(function() {
+    this.test.assertTitle('Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens');
+    this.clickLabel(' Design Themes ', 'a');
+});
+casper.then(function() {
+    this.test.assertTitle('Design android themes -- personalize your phone--Clauncher');
+});
+casper.run();
+/*尝试的第四个*//*
 casper.test.begin('Clauncher', 2, function suite(test) {
     casper.start("http://test.themes.c-launcher.com/", function() {
         test.assertTitle("Clauncher -- Wonderful Android Launcher, Themes, Wallpapers, Ringstones and Homescreens", "home is ok");
@@ -15,7 +24,7 @@ casper.test.begin('Clauncher', 2, function suite(test) {
     casper.run(function() {
         test.done();
     });
-});
+});*/
 /*尝试的第三个*//*
 casper.test.begin('Clauncher', 2, function suite(test) {
     casper.start("http://test.themes.c-launcher.com/", function() {
