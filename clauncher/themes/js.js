@@ -1,4 +1,4 @@
-var casper = require('casper').create();
+//var casper = require('casper').create();
 
 // IIFE to hide casper2done variable
 (function(casper){
@@ -25,7 +25,7 @@ casper.start("http://test.themes.c-launcher.com/").newTab("http://www.baidu.com/
     // this is casper2
     this.echo(this.getCurrentUrl(), this.getTitle());
     this.capture("casper2_1.png");
-    this.thenClick("a#nav-askquestion");
+    this.thenClick(' Design Themes ', 'a');
     this.then(function(){
         this.echo(this.getCurrentUrl(), this.getTitle());
         this.capture("casper2_2.png");
