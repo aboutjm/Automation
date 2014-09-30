@@ -1,4 +1,4 @@
-//var casper = require('casper').create();
+var casper = require('casper').create();
 
 // IIFE to hide casper2done variable
 (function(casper){
