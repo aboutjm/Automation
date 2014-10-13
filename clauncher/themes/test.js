@@ -1,7 +1,14 @@
 casper.start('http://test.themes.c-launcher.com/').then(function() {
     this.echo(this.getTitle());
-    this.clickLabel(' Design Themes ', 'a');
 });
+var selector = ' Design Themes ';
+casper.evaluate(function (selector) {
+    var element = window.__utils__.findOne(selector);
+    if (element instanceof HTMLAnchorElement) {
+        element.removeAttribute('target');
+    }
+}, selector);
+casper.clickLabel(selector, 'a');
 casper.then(function() {
     this.echo(this.getTitle(), 'ERROR');
 });
