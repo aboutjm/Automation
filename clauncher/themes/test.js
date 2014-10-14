@@ -10,7 +10,12 @@ casper.evaluate(function (selector) {
 }, selector);
 casper.then(function() {
     this.clickLabel(selector, 'a');
-    this.echo(this.getTitle(), 'ERROR');
+    this.waitForSelector('.ng-binding', function() {
+        this.echo(this.getTitle(), 'ERROR');
+        this.captureSelector('launcher.png', 'html');
+    }, function() {
+        this.die('Timeout reached. Fail whale?').exit();
+    }, 2000);
 });
 casper.then(function() {
     this.echo(this.getTitle(), 'ERROR');
