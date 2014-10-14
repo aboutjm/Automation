@@ -8,7 +8,9 @@ casper.evaluate(function (selector) {
         element.removeAttribute('target');
     }
 }, selector);
-casper.clickLabel(selector, 'a');
+casper.then(function() {
+    this.clickLabel(selector, 'a');
+});
 casper.then(function() {
     this.echo(this.getTitle(), 'ERROR');
 });
