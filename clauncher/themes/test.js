@@ -1,6 +1,7 @@
 casper.start('http://test.themes.c-launcher.com/').then(function() {
     this.echo(this.getTitle());
 });
+/*
 var selector = ' Design Themes ';
 casper.evaluate(function (selector) {
     var element = window.__utils__.findOne(selector);
@@ -10,6 +11,15 @@ casper.evaluate(function (selector) {
 }, selector);
 casper.then(function() {
     this.clickLabel(selector, 'a', 'click is ok');
+    this.waitForSelector('.ng-binding', function() {
+        this.echo(this.getTitle(), 'ERROR');
+        this.captureSelector('launcher.png', 'html');
+    }, function() {
+        this.die('Timeout reached. Fail whale?').exit();
+    }, 20000);
+});*/
+casper.then(function() {
+    this.clickLabel(' Design Themes ', 'a', 'click is ok');
     this.waitForSelector('.ng-binding', function() {
         this.echo(this.getTitle(), 'ERROR');
         this.captureSelector('launcher.png', 'html');
