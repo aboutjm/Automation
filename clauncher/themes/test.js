@@ -19,7 +19,7 @@ casper.then(function() {
     }, 20000);
 });*/
 casper.then(function() {
-    this.clickLabel(' Design Themes ', 'a', 'click is ok');
+    this.clickLabel(' Themes ', 'a', 'click is ok');
     this.waitForSelector('.ng-binding', function() {
         this.echo(this.getTitle(), 'ERROR');
         this.captureSelector('launcher.png', 'html');
