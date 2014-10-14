@@ -10,6 +10,7 @@ casper.evaluate(function (selector) {
 }, selector);
 casper.then(function() {
     this.clickLabel(selector, 'a');
+    this.echo(this.getTitle(), 'ERROR');
 });
 casper.then(function() {
     this.echo(this.getTitle(), 'ERROR');
