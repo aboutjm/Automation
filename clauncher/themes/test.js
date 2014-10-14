@@ -20,12 +20,7 @@ casper.then(function() {
 });*/
 casper.then(function() {
     this.clickLabel(' Themes ', 'a', 'click is ok');
-    this.waitForSelector('.ng-binding', function() {
-        this.echo(this.getTitle(), 'ERROR');
-        this.captureSelector('launcher.png', 'html');
-    }, function() {
-        this.die('Timeout reached. Fail whale?').exit();
-    }, 20000);
+    this.capture('launcher.png');
 });
 casper.then(function() {
     this.echo(this.getTitle(), 'ERROR');
