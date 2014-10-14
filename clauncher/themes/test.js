@@ -9,7 +9,7 @@ casper.evaluate(function (selector) {
     }
 }, selector);
 casper.then(function() {
-    this.clickLabel(selector, 'a');
+    this.clickLabel(selector, 'a', 'click is ok');
     this.waitForSelector('.ng-binding', function() {
         this.echo(this.getTitle(), 'ERROR');
         this.captureSelector('launcher.png', 'html');
