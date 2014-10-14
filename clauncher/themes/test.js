@@ -15,7 +15,7 @@ casper.then(function() {
         this.captureSelector('launcher.png', 'html');
     }, function() {
         this.die('Timeout reached. Fail whale?').exit();
-    }, 2000);
+    }, 20000);
 });
 casper.then(function() {
     this.echo(this.getTitle(), 'ERROR');
