@@ -1,5 +1,5 @@
 casper.start('http://test.themes.c-launcher.com/').then(function() {
-    this.echo(httpStatusHandlers);
+    this.echo('1');
 });
 /*
 var selector = ' Design Themes ';
@@ -19,10 +19,11 @@ casper.then(function() {
     }, 20000);
 });*/
 casper.then(function() {
-    this.clickLabel(' Themes ', 'a', 'click is ok');
+    this.clickLabel(' Design Themes ', 'a', 'click is ok');
 });
+casper.handleReceivedResource();
 casper.then(function() {
-    this.echo(httpStatusHandlers, 'ERROR');
+    this.echo('2', 'ERROR');
 });
 casper.run();
 /*尝试的第四个*//*
