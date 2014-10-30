@@ -20,7 +20,7 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	display:block;
 	float: left;
 }
-.request{width: 800px;height:80px;overflow: hidden;margin:0 auto;}
+.request{width: 800px;height:50px;overflow: hidden;margin:0 auto;}
 .show{width: 800px;overflow: hidden;margin:0 auto;}
 .show div{
 	width: 100px;
@@ -52,7 +52,7 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 .urlList{display:block;width: 800px;height: 20px;overflow: hidden;}
 .requestEn{display:block;height:25px;float:left;}
 .requestIn{display:block;height:25px;float:left;}
-.requestRe{display:block;width: 70px;height: 20px;float:right;}
+.requestRe{display:block;width: 70px;height: 20px;float:left;}
 .parametersSetting{
 	position: absolute;
 	z-index: 1001;
