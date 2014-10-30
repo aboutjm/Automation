@@ -38,6 +38,7 @@
         </div>
         <script>
             var url = document.getElementById('url');
+            var parameters = document.getElementById('parameters');
             var requestRe = document.getElementById('requestRe');
             var requestEn = document.getElementById('requestEn');
             var requestIn = document.getElementById('requestIn');
@@ -52,15 +53,6 @@
                     addEl(ss);
                 };
             })
-            var parametersSetting = document.getElementById("parametersSetting");
-            var setting = document.getElementById("setting");
-            var set = document.getElementById("set");
-            var set = document.getElementById("set");
-            var settingClose = document.getElementById("settingClose");
-            Event.add(parametersSetting,"click",settingOver);
-            Event.add(settingClose,"click",settingOut);
-            Event.add(set,"click",inSet);
-            checkBoxClick();
         </script>
     </body>
 </html>
