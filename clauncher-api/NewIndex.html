@@ -45,14 +45,7 @@
             var requestSh = document.getElementById('requestSh');
             Event.add(url,"click",inUrl);
             Event.add(requestRe,"click",inRequest);
-            Event.add(requestIn,'change',function(e){
-                var rin = requestIn.value;
-                var pin = parameters.getParameters(rin);
-                for (var i=0,k=pin.length; i<k; i++) {
-                    var ss=pin[i];
-                    addEl(ss);
-                };
-            })
+            Event.add(requestIn,"change",apiAdd);
         </script>
     </body>
 </html>

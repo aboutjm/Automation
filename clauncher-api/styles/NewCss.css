@@ -120,3 +120,9 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	height: 10px;
 	float: left;
 }
+.parameters img{
+	margin-top: 10px;
+	width: 15px;
+	height: 15px;
+	float: left;
+}

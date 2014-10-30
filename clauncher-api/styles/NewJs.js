@@ -31,7 +31,7 @@ function dates(api){
 		getParameters : getParameters
 	}
 }
-var parameters=dates();
+var pars=dates();
 //提供连接中的参数内容的字符串
 function pullPar(){
 	var p = parameters.getElementsByTagName("p");
@@ -59,6 +59,15 @@ function inRequest(){
 			getDate(d);
 		}
 	});
+}
+//选择接口循环添加参数dom结构
+function apiAdd(e){
+    var rin = requestIn.value;
+    var pin = pars.getParameters(rin);
+    for (var i=0,k=pin.length; i<k; i++) {
+        var ss=pin[i];
+        addEl(ss);
+    };
 }
 //添加参数的dom结构
 function addEl(date){
