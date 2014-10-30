@@ -62,6 +62,7 @@ function inRequest(){
 }
 //选择接口循环添加参数dom结构
 function apiAdd(e){
+	parameters.innerHTML="";
     var rin = requestIn.value;
     var pin = pars.getParameters(rin);
     for (var i=0,k=pin.length; i<k; i++) {
