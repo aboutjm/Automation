@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>clauncher-api</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles/NewCss.css">
+    <script type="text/javascript" src="styles/NewJs.js"></script>
+    <script type="text/javascript" src="styles/event.js"></script>
+	<script type="text/javascript" src="ajax/request.js"></script>
+</head>
+    <body>
+    	<div class="request">
+    		<select id="requestEn" style="width: 70px;" name="requestEn" class="requestEn">
+                <option value="test.">测试服</option>
+    			<option value="">正式服</option>
+    		</select>
+    		<select id="requestIn" style="width: 150px;" name="requestIn" class="requestIn">
+    			<option value="/client/home/get.do">首页数据接口</option>
+    			<option value="/client/theme/newest/typelist.do">主题分类接口</option>
+    			<option value="/client/themearea/list.do">主题专区列表接口</option>
+    			<option value="/client/themearea/detail.do">主题专区详情接口</option>
+    			<option value="/client/themearea/themes.do">主题专区主题接口</option>
+    			<option value="/client/theme/new/relatedThemes.do">主题详情关联主题接口</option>
+    			<option value="/client/theme/newest/lastest.do">主题最新接口</option>
+    			<option value="/client/theme/newest/hottest.do">主题最热接口</option>
+    			<option value="/client/theme/newest/lastestByType.do">主题分类最新接口</option>
+    			<option value="/client/theme/newest/hottestByType.do">主题分类最热接口</option>
+                <option value="/client/targetcountry/list.do">推广国家列表接口</option>
+                <option value="/client/themesearch/hotwords.do">搜索热词列表接口</option>
+    		</select>
+            <div id="parameters" class ="parameters" ></div>
+            <a href="#" id ="url" class="requestRe" >组合链接</a>
+            <a href="#" id ="requestRe" class="requestRe" >点击展示</a>
+    		<p id="requestSh" class = "urlList"></p>
+    	</div>
+    	<div class="show" id = "show">
+            <p>展示</p>
+        </div>
+        <script>
+            var url = document.getElementById('url');
+            var requestRe = document.getElementById('requestRe');
+            var requestEn = document.getElementById('requestEn');
+            var requestIn = document.getElementById('requestIn');
+            var requestSh = document.getElementById('requestSh');
+            Event.add(url,"click",inUrl);
+            Event.add(requestRe,"click",inRequest);
+            Event.add(requestIn,'change',function(e){
+                var rin = requestIn.value;
+                var pin = parameters.getParameters(rin);
+                for (var i=0,k=pin.length; i<k; i++) {
+                    var ss=pin[i];
+                    addEl(ss);
+                };
+            })
+            var parametersSetting = document.getElementById("parametersSetting");
+            var setting = document.getElementById("setting");
+            var set = document.getElementById("set");
+            var set = document.getElementById("set");
+            var settingClose = document.getElementById("settingClose");
+            Event.add(parametersSetting,"click",settingOver);
+            Event.add(settingClose,"click",settingOut);
+            Event.add(set,"click",inSet);
+            checkBoxClick();
+        </script>
+    </body>
+</html>

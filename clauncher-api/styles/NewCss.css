@@ -1,0 +1,122 @@
+html,body,ul,li,p,div{padding:0;margin:0;font-size:12px;}
+ul{list-style-type:none;}
+input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],input[type="button"],input[type="radio"],input[type="checkbox"]{width:auto;}
+.icon{
+	margin:5px;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
+	webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	width:15px;height:15px;
+	background-color: #D6305E;
+	display:block;
+	float: left;
+}
+.request{width: 800px;height:80px;overflow: hidden;margin:0 auto;}
+.show{width: 800px;overflow: hidden;margin:0 auto;}
+.show div{
+	width: 100px;
+	height: 20px;
+	border: solid 1px gray;
+	background-color: #605b69;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	color: #303030;
+	font-size: 14px;
+	float: left;
+}
+.show ul{width:800px;overflow: hidden;display: block;}
+.show li{
+	width: 100px;
+	height: 20px;
+	display: block;
+	border: solid 1px #CCCCCC;
+	background-color: #EEEEEE;
+	color: #303030;
+	font-size: 12px;
+	float: left;
+	text-overflow: ellipsis;
+}
+.urlList{display:block;width: 800px;height: 20px;overflow: hidden;}
+.requestEn{display:block;height:25px;float:left;}
+.requestIn{display:block;height:25px;float:left;}
+.requestRe{display:block;width: 70px;height: 20px;float:right;}
+.parametersSetting{
+	position: absolute;
+	z-index: 1001;
+	top:20px;
+	left:35%;
+	width:320px;
+	max-height:420px;
+	padding:1px;
+	border:solid 1px #a5a5a5;
+	background-color: #DDDDDD;
+	font-size: 12px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	float: left;
+}
+.parametersName{
+	width:90px;
+	height:20px;
+	padding:0px 10px 0px 10px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 30px;
+	float: left;
+}
+.checkBox{
+	width:30px;
+	height:20px;
+	padding:0px 10px 0px 10px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 30px;
+	float: left;
+}
+.settingContainer{
+	margin-top: 10px;
+	padding:5px;
+	border-top:solid 5px #BBBBBB;
+	background-color: #CCCCCC;
+	text-align: right;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	-webkit-border-bottom-left-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-moz-border-bottom-left-radius:10px;
+	-moz-border-bottom-right-radius:10px;
+}
+.pBox{overflow: hidden;}
+.parameters{
+	height: 20px;
+	float: left;
+}
+.parameters p{
+	margin-top: 10px;
+	display: inline-block;
+	height: 20px;
+	float: left;
+}
+.parameters input{
+	margin-top: 10px;
+	width: 50px;
+	height: 10px;
+	float: left;
+}
