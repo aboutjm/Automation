@@ -1,5 +1,3 @@
-var showKeyD = document.getElementsById("showKey");
-var show = document.getElementsById("show");
 //获取接口对应参数的方法	parameters.getParameters("接口名称");
 function dates(api){
 	var parameters = ["country","channelId","auditTime","density","downloads","iconName","id","local",
