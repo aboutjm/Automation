@@ -146,6 +146,7 @@ function showGetDate(){
 			}
 		}
 		function showKey(){
+			showKeyD.innerHTML="";
 			for(var i=0,leng=keys2.length;i<leng;i++){
 				showKeyDomAdd(i);
 			}
