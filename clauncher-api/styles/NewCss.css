@@ -59,12 +59,12 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	float: left;
 }
 .showKey input{
-	display:block;
-	width:16px;
-	height:16px;
-	padding:2px 2px 2px 2px;
+	width:30px;
+	height:20px;
+	padding:0px 10px 0px 10px;
 	font-weight: bold;
 	text-align: right;
+	line-height: 30px;
 	float: left;
 }
 .urlList{display:block;width: 800px;height: 20px;overflow: hidden;}
