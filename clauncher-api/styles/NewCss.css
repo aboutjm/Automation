@@ -47,6 +47,12 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	display:block;
 	overflow: hidden;
 }
+.showKey{
+	overflow: hidden;
+}
+.show{
+	overflow: hidden;
+}
 .showKey div{
 	height:10px;
 	padding:2px 2px 2px 2px;
