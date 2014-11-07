@@ -147,11 +147,14 @@ function showGetDate(){
 		}
 		function showKey(){
 			for(var i=0,leng=keys2.length;i<leng;i++){
+				showKeyDomAdd(i);
+			}
+			function showKeyDomAdd(n){
 				var div =document.createElement("div");
 				showKeyD.appendChild(div);
 				var input =document.createElement("input");
 				showKeyD.appendChild(input);
-				var ssk = keys2[i];
+				var ssk = keys2[n];
 				div.innerHTML = ssk;
 				input.type = "checkbox";
             	Event.add(input,"click",sKeys3);
@@ -162,13 +165,13 @@ function showGetDate(){
             				aass=i;
             			}
             		};
-            		if(aass !== 100){
+            		if(aass === 100){
             			keys3.push(ssk);
             		}else{
             			Keys3.splice(aass,1);
             		} 
             	}
-			}
+            }
 		}
 	}
 	//展示要展示数据
