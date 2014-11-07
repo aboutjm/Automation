@@ -51,20 +51,20 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 }
 .showKey div{
 	width:50px;
-	height:16px;
+	height:10px;
 	padding:2px 2px 2px 2px;
-	font-weight: bold;
+	font-size: 9px;
 	text-align: right;
-	line-height: 20px;
+	line-height: 10px;
 	float: left;
 }
 .showKey input{
-	width:30px;
-	height:20px;
-	padding:0px 10px 0px 10px;
+	width:10px;
+	height:10px;
+	padding:2px 2px 2px 2px;
 	font-weight: bold;
 	text-align: right;
-	line-height: 30px;
+	line-height: 10px;
 	float: left;
 }
 .urlList{display:block;width: 800px;height: 20px;overflow: hidden;}

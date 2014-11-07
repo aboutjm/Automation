@@ -36,8 +36,8 @@
         <p id="requestSh" class = "urlList"></p>
         </div>
     	<div class="showBox">
-            <p>展示</p>
             <div class="showKey" id = "showKey"></div>
+            <p>展示</p>
             <div class="show" id = "show"></div>
         </div>
         <script>
@@ -49,7 +49,7 @@
             var key = document.getElementById('key');
             var showKeyD = document.getElementById("showKey");
             var show = document.getElementById("show");
-            Event.add(requestRe,"click",inRequest);
+            Event.add(requestRe,"click",showDate.inRequest);
             Event.add(requestIn,"change",apiAdd);
             Event.add(key,"click",sKey);
         </script>

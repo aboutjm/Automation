@@ -18,8 +18,9 @@ function dates(api){
 		"/client/themesearch/search.do":[3,7,0,1,22,17,21,23]
 	}
 	var n=api;
-	var apiParameters=[];
+	var apiParameters;
 	function getParameters(n){
+		apiParameters=[];
 		var key = apiinfo[n];
 		for(var i=0,k=key.length;i<k;i++){
 			var x=key[i];
@@ -88,94 +89,107 @@ function sKey(){
 		url : inUrl(),
 		type : 'GET',
 		success : function(d){
-			getDate(d);
+			showDate.getDate(d);
 		}
 	});
 }
-//获取数据查分数据
-function getDate(n){
-	var date =  JSON.parse(n);
-	var uDate = date["data"];
-	var keys1 =[];
-	for(var key in uDate){
-		keys1.push(key);
-	}
-	var s;
-	if(keys1[0] !== "code"){
-		s=keys1[0];
-	}else{
-		s=keys1[1];
-	}
-	var lDate = uDate[s];
-	var keys2 =[];
-	var keys3 =[];
-	function key2Fu(){
-		if(typeof lDate[0] ==="object"){
-			for(var key in lDate[0]){
-				keys2.push(key);
+function showGetDate(){
+	var lDate,keys3;
+	//获取数据查分数据
+	function getDate(n){
+		var date =  JSON.parse(n);
+		var uDate = date["data"];
+		var keys1 =[];
+		for(var key in uDate){
+			keys1.push(key);
+		}
+		var s;
+		if(keys1[0] !== "code"){
+			s=keys1[0];
+		}else{
+			s=keys1[1];
+		}
+		lDate = uDate[s];
+		var keys2 =[];
+		keys3 =[];
+		function key2Fu(){
+			if(typeof lDate[0] ==="object"){
+				for(var key in lDate[0]){
+					keys2.push(key);
+				}
+			}else{
+				keys2=s;
+			}
+		}
+		if(uDate["code"]===100){
+			show.innerHTML = "";
+			key2Fu();
+			if(keys2!==s){
+				showKey();
+			}else{
+				showFuString();
 			}
 		}else{
-			keys2=s;
-		}
-	}
-	if(uDate["code"]===100){
-		show.innerHTML = "";
-		key2Fu();
-		if(keys2!==s){
-			showKey();
-		}else{
-			showFuString();
-		}
-	}else{
-		show.innerHTML = "code"+uDate["code"]+"备注：101=无结果；102=参数错误；103=程序异常。";
-	}	
-	function showFuString(){
-		var div =document.createElement("div");
-		show.appendChild(div);
-		div.innerHTML = keys2;
-		for(var x=0,len=lDate.length;x<len;x++){
-			var ul =document.createElement("ul");
-			show.appendChild(ul);
-			var li =document.createElement("li");
-			ul.appendChild(li);
-			var u=lDate[x];
-			li.innerHTML = u;
-		}
-	}
-	function showKey(){
-		for(var i=0,leng=keys2.length;i<leng;i++){
-			var div =document.createElement("div");
-			showKeyD.appendChild(div);
-			var input =document.createElement("input");
-			showKeyD.appendChild(input);
-			div.innerHTML = keys2[i];
-			input.type = "checkbox";
-		}
-	}
-	return keys3,lDate;
-}
-//展示要展示数据
-function inRequest(){
-	//创建样式
-	function showFu(){
-		show.innerHTML ="";
-		//表头
-		for(var i=0,len=keys3.length;i<len;i++){
+			show.innerHTML = "code"+uDate["code"]+"备注：101=无结果；102=参数错误；103=程序异常。";
+		}	
+		function showFuString(){
 			var div =document.createElement("div");
 			show.appendChild(div);
-			div.innerHTML = keys3[i];
-		}
-		//内容
-		for(var x=0,len=lDate.length;x<len;x++){
-			var ul =document.createElement("ul");
-			show.appendChild(ul);
-			for(var y=0,leng=keys3.length;y<leng;y++){
+			div.innerHTML = keys2;
+			for(var x=0,len=lDate.length;x<len;x++){
+				var ul =document.createElement("ul");
+				show.appendChild(ul);
 				var li =document.createElement("li");
 				ul.appendChild(li);
-				var t=keys3[y];
 				var u=lDate[x];
-				li.innerHTML = u[t];
+				li.innerHTML = u;
+			}
+		}
+		function showKey(){
+			for(var i=0,leng=keys2.length;i<leng;i++){
+				var div =document.createElement("div");
+				showKeyD.appendChild(div);
+				var input =document.createElement("input");
+				showKeyD.appendChild(input);
+				var ssk = keys2[i];
+				div.innerHTML = ssk;
+				input.type = "checkbox";
+            	Event.add(input,"click",sKeys3);
+            	function sKeys3(){
+            		keys3.push(ssk);
+            	}
 			}
 		}
 	}
+	//展示要展示数据
+	function inRequest(){
+		//创建样式
+		function showFu(){
+			show.innerHTML ="";
+			//表头
+			for(var i=0,len=keys3.length;i<len;i++){
+				var div =document.createElement("div");
+				show.appendChild(div);
+				div.innerHTML = keys3[i];
+			}
+			//内容
+			for(var x=0,len=lDate.length;x<len;x++){
+				var ul =document.createElement("ul");
+				show.appendChild(ul);
+				for(var y=0,leng=keys3.length;y<leng;y++){
+					var li =document.createElement("li");
+					ul.appendChild(li);
+					var t=keys3[y];
+					var u=lDate[x];
+					li.innerHTML = u[t];
+				}
+			}
+		}
+		showFu();
+	}
+	return {
+		getDate : getDate,
+		inRequest : inRequest
+	}
 }
+var showDate=showGetDate();
