@@ -1,3 +1,5 @@
+var showKeyD = document.getElementsById("showKey");
+var show = document.getElementsById("show");
 //获取接口对应参数的方法	parameters.getParameters("接口名称");
 function dates(api){
 	var parameters = ["country","channelId","auditTime","density","downloads","iconName","id","local",
@@ -49,17 +51,6 @@ function inUrl(){
 	requestSh.innerHTML = requestUrl;
 	return requestUrl;
 }
-//发送get请求
-function inRequest(){
-	var requestUrl=requestSh.innerHTML;
-	request.ajax({
-		url : requestUrl,
-		type : 'GET',
-		success : function(d){
-			getDate(d);
-		}
-	});
-}
 //选择接口循环添加参数dom结构
 function apiAdd(e){
 	parameters.innerHTML="";
@@ -89,14 +80,23 @@ function addEl(date){
 		parentNode.removeChild(img);
 	}
 }
-
 //localVersions={“packageName”:versionCode,...}
 /*
 展示部分逻辑
 */
+//展示出可选择展示的选项sKey
+function sKey(){
+	var requestUrl=requestSh.innerHTML;
+	request.ajax({
+		url : requestUrl,
+		type : 'GET',
+		success : function(d){
+			getDate(d);
+		}
+	});
+}
 //获取数据查分数据
 function getDate(n){
-	show.innerHTML ="";
 	var date =  JSON.parse(n);
 	var uDate = date["data"];
 	var keys1 =[];
@@ -111,6 +111,7 @@ function getDate(n){
 	}
 	var lDate = uDate[s];
 	var keys2 =[];
+	var keys3 =[];
 	function key2Fu(){
 		if(typeof lDate[0] ==="object"){
 			for(var key in lDate[0]){
@@ -120,27 +121,17 @@ function getDate(n){
 			keys2=s;
 		}
 	}
-	//创建样式
-	function showFu(){
-		//表头
-		for(var i=0,len=keys2.length;i<len;i++){
-			var div =document.createElement("div");
-			show.appendChild(div);
-			div.innerHTML = keys2[i];
+	if(uDate["code"]===100){
+		show.innerHTML = "";
+		key2Fu();
+		if(keys2!==s){
+			showKey();
+		}else{
+			showFuString();
 		}
-		//内容
-		for(var x=0,len=lDate.length;x<len;x++){
-			var ul =document.createElement("ul");
-			show.appendChild(ul);
-			for(var y=0,leng=keys2.length;y<leng;y++){
-				var li =document.createElement("li");
-				ul.appendChild(li);
-				var t=keys2[y];
-				var u=lDate[x];
-				li.innerHTML = u[t];
-			}
-		}
-	}
+	}else{
+		show.innerHTML = "code"+uDate["code"]+"备注：101=无结果；102=参数错误；103=程序异常。";
+	}	
 	function showFuString(){
 		var div =document.createElement("div");
 		show.appendChild(div);
@@ -154,15 +145,39 @@ function getDate(n){
 			li.innerHTML = u;
 		}
 	}
-	if(uDate["code"]===100){
-		show.innerHTML = "<p>展示</p>";
-		key2Fu();
-		if(keys2!==s){
-			showFu();
-		}else{
-			showFuString();
+	function showKey(){
+		for(var i=0,leng=keys2.length;i<leng;i++){
+			var div =document.createElement("div");
+			showKeyD.appendChild(ul);
+			var input =document.createElement("input");
+			showKeyD.appendChild(li);
+			div.innerHTML = keys2[i];
 		}
-	}else{
-		show.innerHTML = "code"+uDate["code"]+"备注：101=无结果；102=参数错误；103=程序异常。";
+	}
+	return keys3,lDate;
+}
+//展示要展示数据
+function inRequest(){
+	//创建样式
+	function showFu(){
+		show.innerHTML ="";
+		//表头
+		for(var i=0,len=keys3.length;i<len;i++){
+			var div =document.createElement("div");
+			show.appendChild(div);
+			div.innerHTML = keys3[i];
+		}
+		//内容
+		for(var x=0,len=lDate.length;x<len;x++){
+			var ul =document.createElement("ul");
+			show.appendChild(ul);
+			for(var y=0,leng=keys3.length;y<leng;y++){
+				var li =document.createElement("li");
+				ul.appendChild(li);
+				var t=keys3[y];
+				var u=lDate[x];
+				li.innerHTML = u[t];
+			}
+		}
 	}
 }

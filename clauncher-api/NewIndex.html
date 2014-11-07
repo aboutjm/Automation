@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>clauncher-api</title>
+	<title>clauncher-api-New</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="styles/NewCss.css">
     <script type="text/javascript" src="styles/NewJs.js"></script>
@@ -12,7 +12,7 @@
     	<div class="request">
     		<select id="requestEn" style="width: 70px;" name="requestEn" class="requestEn">
                 <option value="test.">测试服</option>
-    			<option value="">正式服</option>
+    			<option value="" style = "display: none;">正式服</option>
     		</select>
     		<select id="requestIn" style="width: 150px;" name="requestIn" class="requestIn">
     			<option value="/client/home/get.do">首页数据接口</option>
@@ -32,11 +32,14 @@
     	</div>
         <div class="request">
         <a href="#" id ="url" class="requestRe" >组合链接</a>
+        <a href="#" id ="key" class="requestRe" >获取可显示选项</a>
         <a href="#" id ="requestRe" class="requestRe" >点击展示</a>
         <p id="requestSh" class = "urlList"></p>
         </div>
-    	<div class="show" id = "show">
+    	<div class="showBox">
             <p>展示</p>
+            <div class="showKey" id = "showKey"></div>
+            <div class="show" id = "show"></div>
         </div>
         <script>
             var url = document.getElementById('url');
@@ -45,9 +48,11 @@
             var requestEn = document.getElementById('requestEn');
             var requestIn = document.getElementById('requestIn');
             var requestSh = document.getElementById('requestSh');
+            var key = document.getElementById('key');
             Event.add(url,"click",inUrl);
             Event.add(requestRe,"click",inRequest);
             Event.add(requestIn,"change",apiAdd);
+            Event.add(key,"click",sKey);
         </script>
     </body>
 </html>
