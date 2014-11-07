@@ -44,10 +44,10 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	text-overflow: ellipsis;
 }
 .showBox p{
+	display:block;
 	overflow: hidden;
 }
 .showKey div{
-	width:50px;
 	height:10px;
 	padding:2px 2px 2px 2px;
 	font-size: 9px;
