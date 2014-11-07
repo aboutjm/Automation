@@ -145,9 +145,9 @@ function getDate(n){
 	function showKey(){
 		for(var i=0,leng=keys2.length;i<leng;i++){
 			var div =document.createElement("div");
-			showKeyD.appendChild(ul);
+			showKeyD.appendChild(div);
 			var input =document.createElement("input");
-			showKeyD.appendChild(li);
+			showKeyD.appendChild(input);
 			div.innerHTML = keys2[i];
 		}
 	}
