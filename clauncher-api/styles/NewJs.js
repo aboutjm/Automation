@@ -149,6 +149,7 @@ function getDate(n){
 			var input =document.createElement("input");
 			showKeyD.appendChild(input);
 			div.innerHTML = keys2[i];
+			input.style.type="checkbox";
 		}
 	}
 	return keys3,lDate;
