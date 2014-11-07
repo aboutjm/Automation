@@ -156,7 +156,17 @@ function showGetDate(){
 				input.type = "checkbox";
             	Event.add(input,"click",sKeys3);
             	function sKeys3(){
-            		keys3.push(ssk);
+            		var aass = 100;
+            		for (var i=0,h=keys3.length; i<h; i++) {
+            			if(keys3[i]===ssk){
+            				aass=i;
+            			}
+            		};
+            		if(aass !== 100){
+            			keys3.push(ssk);
+            		}else{
+            			Keys3.splice(aass,1);
+            		} 
             	}
 			}
 		}

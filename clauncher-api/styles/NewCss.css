@@ -27,12 +27,6 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	height: 20px;
 	border: solid 1px gray;
 	background-color: #605b69;
-	-webkit-border-top-left-radius:4px;
-	-moz-border-radius-topleft:4px;
-	border-top-left-radius:4px;
-	webkit-border-top-right-radius:4px;
-	-moz-border-radius-topright:4px;
-	border-top-right-radius:4px;
 	color: #303030;
 	font-size: 14px;
 	float: left;
@@ -48,6 +42,9 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 	font-size: 12px;
 	float: left;
 	text-overflow: ellipsis;
+}
+.showBox p{
+	overflow: hidden;
 }
 .showKey div{
 	width:50px;
