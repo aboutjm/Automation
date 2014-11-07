@@ -84,9 +84,8 @@ function addEl(date){
 */
 //展示出可选择展示的选项sKey
 function sKey(){
-	//var requestUrl=requestSh.innerHTML;
 	request.ajax({
-		url : requestUrl,
+		url : inUrl(),
 		type : 'GET',
 		success : function(d){
 			getDate(d);

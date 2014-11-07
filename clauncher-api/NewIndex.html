@@ -31,7 +31,6 @@
             <div id="parameters" class ="parameters" ></div>
     	</div>
         <div class="request">
-        <a href="#" id ="url" class="requestRe" >组合链接</a>
         <a href="#" id ="key" class="requestRe" >获取可显示选项</a>
         <a href="#" id ="requestRe" class="requestRe" >点击展示</a>
         <p id="requestSh" class = "urlList"></p>
@@ -42,7 +41,6 @@
             <div class="show" id = "show"></div>
         </div>
         <script>
-            var url = document.getElementById('url');
             var parameters = document.getElementById('parameters');
             var requestRe = document.getElementById('requestRe');
             var requestEn = document.getElementById('requestEn');
@@ -51,7 +49,6 @@
             var key = document.getElementById('key');
             var showKeyD = document.getElementById("showKey");
             var show = document.getElementById("show");
-            Event.add(url,"click",inUrl);
             Event.add(requestRe,"click",inRequest);
             Event.add(requestIn,"change",apiAdd);
             Event.add(key,"click",sKey);
