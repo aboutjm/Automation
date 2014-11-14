@@ -4,6 +4,11 @@ function dates(api){
 	"language","weight","version","type","themeId","themeAreaId","sdkVersion","recommendTime","paperId",
 	"pageSize","packageName","orderNum","localVersions","recommendSize","page","k"];
 	var apiinfo = {
+		"/client/newwallpaper/typelist.do":[8,0,7],
+		"/client/newwallpaper/lastest.do":[17,4,16,8,0,10,7],
+		"/client/newwallpaper/hottest.do":[17,16,15,8,0,10,7],
+		"/client/newwallpaper/lastestByType.do":[17,16,11,8,0,10,7],
+		"/client/newwallpaper/hottestByType.do":[17,16,11,4,8,0,10,7],
 		"/client/home/get.do":[8,0,1,3,7],
 		"/client/theme/newest/typelist.do":[8,0,1,5,7],
 		"/client/themearea/list.do":[8,0,1,13,9,17,7],
@@ -16,6 +21,16 @@ function dates(api){
 		"/client/theme/newest/hottestByType.do":[8,0,1,17,3,19,11,7],
 		"/client/targetcountry/list.do":[8,0],
 		"/client/themesearch/search.do":[3,7,0,1,22,17,21,23]
+		"/client/lockscreentheme/lastest.do":[17,12,2,8,0,10,7],
+		"/client/lockscreentheme/lastestByType.do":[17,12,2,11,8,0,10,7],
+		"/client/lockscreentheme/hottest.do":[17,12,4,8,0,10,7],
+		"/client/lockscreentheme/hottestByType.do":[17,12,4,11,8,0,10,7],
+		"/client/lockscreentheme/recommended.do":[17,12,15,8,0,10,7],
+		"/client/lockscreentheme/recommendedByType.do":[17,12,15,11,8,0,10,7],
+		"/client/lockscreentheme/typelist.do":[8,0,7],
+		"/client/lockscreentheme/download.do":[18],
+		"/client/lockscreentheme/checkUpdate.do":[20,0,1,8,7],
+		"/client/lockscreen/recommendapp/list.do":[0,8,17,19,14,1,7],
 	}
 	var n=api;
 	var apiParameters;
