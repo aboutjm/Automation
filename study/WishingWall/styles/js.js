@@ -15,16 +15,22 @@ function wishing(){
 }
 function createDesire(){
 	//增加html节点
-	var top = getRan(0,500);
-	var left = getRan(480,1350);
+	var top = getRan(0,450);
+	var left = getRan(300,1000);
+	var one = getRan(0,99);
+	var two = getRan(0,99);
+	var three = getRan(0,99);
 	var date = new Date();
 	var div = document.createElement("div");
 	div.style.left = left+"px";
 	div.style.top = top+"px";
+	div.style.background = "#"+one+two+three;
+	div.style.color = "#"+three+three+three;
 	//div.style.z-index = index;
 	index++;
 	//增加html节点内容
-	div.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;"+desire.value+"&nbsp;&nbsp;-&nbsp;-&nbsp;-&nbsp;&nbsp;"+date.getFullYear()+"年"+date.getMonth()+"月"+date.getDate()+"日";
+	var Month = date.getMonth()+1;
+	div.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;"+desire.value+"&nbsp;&nbsp;-&nbsp;-&nbsp;-&nbsp;&nbsp;"+date.getFullYear()+"年"+Month+"月"+date.getDate()+"日";
 	//节点插入到许愿墙
 	wall.appendChild(div);
 }
