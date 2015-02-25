@@ -1,3 +1,4 @@
+http://docs.casperjs.org/en/latest/modules/casper.html
 The casper module
 The Casper class
 Casper.options
