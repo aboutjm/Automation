@@ -29,6 +29,7 @@ function createDesire(){
 	div.style.zIndex = index+1;
 	index++;
 	var startX,startrY,oTop,oLeft;
+	var mouseMoveO = 0;
 	//增加点击方法
 	Event.add(div,"click",upClass);
 	function upClass(e){
@@ -38,33 +39,39 @@ function createDesire(){
 	}
 	Event.add(div,"mousedown",reference);
 	function reference(e){
-		var obj = Event.target(e);		
+		var obj = Event.target(e);
 		var mouseX = e.pageX || (e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft));
 		var mouseY = e.pageY || (e.clientY + (document.documentElement.scrollTop || document.body.scrollTop));
 		startX = mouseX;
 		startrY = mouseY;
 		oTop = obj.style.top;
 		oLeft = obj.style.left;
+		mouseMoveO = 1;
 		console.log(startX,startrY,oTop,oLeft);
 	}
 	Event.add(div,"mousemove",move);
 	function move(e){
-		var obj = Event.target(e);		
+		var obj = Event.target(e);
 		var mouseX = e.pageX || (e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft));
 		var mouseY = e.pageY || (e.clientY + (document.documentElement.scrollTop || document.body.scrollTop));
-		obj.style.left = (parseInt(oLeft)+startrY-mouseY)+"px";
-		obj.style.top = (parseInt(oTop)+startX-mouseX)+"px";
-		console.log(startX,startrY,oTop,oLeft,obj.style.left,obj.style.top);
+		if(mouseMoveO===1){
+			obj.style.left = (parseInt(oLeft)+mouseX-startX)+"px";
+			obj.style.top = (parseInt(oTop)+mouseY-startrY)+"px";
+			console.log(startX,startrY,oTop,oLeft,obj.style.left,obj.style.top);
+		}
 	}
 	Event.add(div,"mouseup",over);
 	function over(e){
 		var obj = Event.target(e);
-		var overLeft=parseInt(oLeft)+startrY-mouseY;
-		var overTop=parseInt(oTop)+startX-mouseX;
+		var mouseX = e.pageX || (e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft));
+		var mouseY = e.pageY || (e.clientY + (document.documentElement.scrollTop || document.body.scrollTop));
+		var overLeft=parseInt(oLeft)+mouseX-startX;
+		var overTop=parseInt(oTop)+mouseY-startrY;
 		if(overTop<0||overTop>450||overLeft<300||overLeft>1000){
 			obj.style.left = oLeft;
 			obj.style.top = oTop;
 		}
+		mouseMoveO = 0;
 	}
 	//增加html节点内容
 	var Month = date.getMonth()+1;
