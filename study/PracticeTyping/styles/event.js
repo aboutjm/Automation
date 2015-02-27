@@ -47,6 +47,6 @@ function getRan(min,max){
 function getString(len,radix) {
     radix = radix ? 10 : 36;
     var rdmString = "";
-    for (var x=rdmString.length; x < len; rdmString += Math.random().toString(radix).substr(2));
+    for (; rdmString.length < len; rdmString += Math.random().toString(radix).substr(2));
     return rdmString.substr(0, len);
 }

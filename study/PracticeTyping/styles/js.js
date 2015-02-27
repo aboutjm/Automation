@@ -1,7 +1,3 @@
-var reference=document.getElementById('reference');
-var practice=document.getElementById('practice');
-var sText =getString(30);
-reference.innerHTML=sText;
 function check(){
 	var rText=reference.innerText;
 	var pText=practice.innerText;
