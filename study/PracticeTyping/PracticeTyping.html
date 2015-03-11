@@ -14,12 +14,13 @@
         </div>
         <div class="text" id="reference"></div>
         请在这里面打字<br/>
-        <div contenteditable class="text" id="practice" onkeyup="check()"></div><br/>
+        <div contenteditable class="text" id="practice" onkeyup="check()"></div>
         <script>
             var reference=document.getElementById('reference');
             var practice=document.getElementById('practice');
             var sText =getString(150);
             reference.innerHTML=sText;
+            console.log(practice);
         </script>
     </body>
 </html>
