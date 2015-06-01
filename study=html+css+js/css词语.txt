@@ -1,0 +1,136 @@
+width
+height
+padding
+border
+margin
+
+link
+visited
+active
+hover
+focus
+
+id
+class
+lang(fr)
+before
+after
+important
+h1
+first-child
+class
+[type=“text"]
+hover
+style
+color
+h1
+first-child
+list
+li 
+
+float	浮动
+left	左浮动
+right	右浮动
+none	不浮动 (默认值)
+
+position	定位
+absolute	绝对定位
+relative		相对定位
+fixed		固定定位
+static		没有定位 (默认值)
+top
+bottom
+left
+right
+z-index
+
+display与visibility	隐藏及显示
+visibility:visible;display:block;	显示元素
+visibility:hidden;display:none;	隐藏元素
+
+HTML 常用标签在浏览器中的默认样式：
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,table,th,td,fieldset,
+form,input,button,textarea,hr,blockquote,pre{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:bold;line-height:1em;}
+ul,ol,dl{list-style-type:none;}
+fieldset,img{border:none;}
+table{border-collapse:collapse;table-layout:fixed;empty-cells:show;}
+address,caption,cite,code,dfn,th{font-style:normal;font-weight:normal;}
+ins{text-decoration:underline;}
+del{text-decoration:line-through;}
+q:before,q:after{content:"";}
+font
+outline
+list-style
+body ul li a {color:#f00;}
+[type=“text"]
+hover
+first-child
+jQuery
+solid
+border
+display
+visibility
+overflow
+position
+float
+clear
+display
+visibility
+overflow
+position
+float
+clear
+top
+left
+width
+height
+margin
+padding
+border
+outline
+background
+display
+visibility
+overflow
+position
+float
+clear
+top
+left
+width
+height
+margin
+padding
+border
+outline
+background
+color
+font
+line-height
+text-align
+text-decoration
+text-indent
+text-transform
+vertical-align
+white-space
+content
+块元素 (block)
+div p h1~h6 ul ol li dl dt dd table form …
+行内元素 (inline)
+span a img em strong select input textarea …
+行内元素无法设置一些CSS属性，例如：
+width, height, margin-top, margin-bottom,
+padding-top padding-bottom, text-index …
+display 常用属性
+inline 设置为行内元素
+block 设置为块元素
+inline-block 设置为行内块元素*
+none 元素不会被显示
+
+JPG
+适合：人像、风景、实物图、卡通图片、3D效果图 …
+GIF
+适合：LOGO、图标、按钮、透明、动画…
+PNG
+适合：LOGO、图标、按钮、透明、半透明 …
