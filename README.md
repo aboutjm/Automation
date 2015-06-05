@@ -3,7 +3,10 @@ Automation
 
 testAutomation
 
-cluancher---testAutomation
+Automation-cluancher---casperjs
+Automation-zywt---selenium
+book---
+casper-test---casperjs
 cluancher-api---api Show
-study---js study
-test---caspar Study
+psd---
+study=html+css+js
