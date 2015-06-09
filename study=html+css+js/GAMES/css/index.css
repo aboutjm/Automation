@@ -1,0 +1,17 @@
+html,body,ul,li,p,div{padding:0;margin:0;font-size:12px;}
+ul{list-style-type:none;}
+.all{width: 957px;margin:0 auto;}
+.head{height: 50px;margin-bottom: 17px;overflow:hidden;}
+.logo{width: 130px;height: 50px;margin-right: 97px;display:block;float: left;background-color: red;}
+.nav{
+	display: block;
+	float: left;
+	font:18px/40px '微软雅黑';
+	height: 40px;
+	margin: 6px 7px 0 7px;
+	padding: 0 13px;
+	border-bottom: 4px solid #5a93f2;
+	color: #5891EF;
+	text-decoration: none;
+}
+.tail{height:266px;}
