@@ -1,0 +1,17 @@
+
+1.安装python-2.7.10.amd64.msi（安装python）
+2.配置环境变量，修改我的电脑->属性->高级->环境变量->系统变量中的PATH为:变量名：PATH变量值：;C:\Python27 
+3.开始cmd中进入对应目录执行 python ez_setup.py（安装setuptools）
+4.解压后，开始cmd中进入对应目录执行python setup.py install（安装pip）
+5.再切换到C:\Python27\Scripts 目录下输入：easy_install pip
+6.可以直接在C:\Python27\Scripts  下输入命令安装：pip install -U selenium（安装selenium）
+
+
+
+
+
+
+
+
+
+
