@@ -2,16 +2,40 @@
 1.安装python-2.7.10.amd64.msi（安装python）
 2.配置环境变量，修改我的电脑->属性->高级->环境变量->系统变量中的PATH为:变量名：PATH变量值：;C:\Python27 
 3.开始cmd中进入对应目录执行 python ez_setup.py（安装setuptools）
-4.解压后，开始cmd中进入对应目录执行python setup.py install（安装pip）
+4.解压后，开始cmd中进入对应目录(C:\Users\Administrator\Downloads)执行python setup.py install（安装pip）
 5.再切换到C:\Python27\Scripts 目录下输入：easy_install pip
 6.可以直接在C:\Python27\Scripts  下输入命令安装：pip install -U selenium（安装selenium）
+pip install tkinter
+pip install swampy
+pip uninstall swampy
+pip search swampy
+easy_install tkinter
+easy_install swampy
+import tkinter
+import swampy
+import swampy.turtleworld
 
-
-
-
-
-
-
-
-
-
+C:\Tcl\bin
+;C:\Python27\Lib\site-packages\PyQt4
+;C:\ProgramData\Oracle\Java\javapath
+;%SystemRoot%\system32
+;%SystemRoot%
+;%SystemRoot%\System32\Wbem
+;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\
+;%JAVA_HOME%\bin
+;%JAVA_HOME%\jre\bin
+;%CATALINA_HOME%\lib
+;%CATALINA_HOME%\bin
+;D:\apache-tomcat-7.0.52\bin
+;D:\Program Files\MySQL\MySQL Server 5.5\bin
+;D:\Program Files\Java\jdk1.7.0_67\bin
+;D:\Program Files\Java\jre7\bin
+;C:\Program Files (x86)\HP\LoadRunner\strawberry-perl\perl\bin
+;C:\Python27
+;C:\Python27\DLLs
+;C:\Python27\Scripts
+;C:\Python27\Lib\site-packages\vtk
+;C:\Python27\gnuplot\binary
+;C:\Program Files (x86)\pythonxy\SciTE-3.3.2-3
+;C:\Program Files (x86)\pythonxy\console
+;C:\MinGW32-xy\bin

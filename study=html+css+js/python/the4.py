@@ -11,11 +11,10 @@ import math
 
 try:
     # see if Swampy is installed as a package
-    from swampy.TurtleWorld import *
+    from swampy.turtleworld import *
 except ImportError:
     # otherwise see if the modules are on the PYTHONPATH
-    from TurtleWorld import *
-
+    from turtleworld import *
 
 def square(t, length):
     """Draws a square with sides of the given length.
