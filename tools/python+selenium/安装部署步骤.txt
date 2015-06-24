@@ -39,3 +39,14 @@ C:\Tcl\bin
 ;C:\Program Files (x86)\pythonxy\SciTE-3.3.2-3
 ;C:\Program Files (x86)\pythonxy\console
 ;C:\MinGW32-xy\bin
+
+
+
+mac
+开启root
+su 管理员guanyujingmei
+su 超级管理员root
+python自带
+curl https://bootstrap.pypa.io/ez_setup.py -o - | python安装setuptools
+sudo easy_install pip安装pip
+pip install selenium安装selenium
