@@ -8,14 +8,16 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 """
 
 import math
+import swampy.color_list
+#import swampy.TurtleWorld
 
-try:
+"""try:
     # see if Swampy is installed as a package
-    from swampy.turtleworld import *
+    from swampy.TurtleWorld import *
 except ImportError:
     # otherwise see if the modules are on the PYTHONPATH
-    from turtleworld import *
-
+    from TurtleWorld import *
+"""
 def square(t, length):
     """Draws a square with sides of the given length.
 
