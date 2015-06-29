@@ -11,7 +11,7 @@ from swampy.TurtleWorld import *
 world = TurtleWorld()
 bob = Turtle()
 
-bob.delay = 0.01
+bob.delay = 0.001
 """#4.1
 fd(bob,100)
 lt(bob)
@@ -36,15 +36,17 @@ def square(t,length):
     for i in range(4):
         fd(t,length)
         lt(t)
+"""
 
-#4.3(3)
+"""#4.3(3)
 def polygon(t,length,n):
     angle = 360.0/n
     for i in range(n):
         fd(t,length)
         lt(t,angle)
+"""
 
-#4.3(4)
+"""#4.3(4)
 def circle(t,r):
     circumference = r * math.pi * 2
     n = int(circumference/3)+1
@@ -65,3 +67,30 @@ def polyline(t,length,n,angle):
         lt(t,angle)
 def circle(t,r):
     arc(t,r,360)
+    
+#4.12
+#4-1
+    #1.
+    #2.
+    #3.
+    
+#4-2
+def petal(t,r,degree):
+    turn = 180 - degree
+    arc(t,r,degree)
+    lt(t,turn)
+    arc(t,r,degree)
+
+def flower(t,r,degree):
+    n = int(180/(90-degree))
+    for i in range(n):
+        petal(t,r,degree)
+        lt(t,degree)
+
+flower(bob,100,80)
+#4-3
+    
+#4-4
+    
+#4-5
+
