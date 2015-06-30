@@ -76,20 +76,58 @@ def circle(t,r):
     
 #4-2
 def petal(t,r,degree):
-    turn = 180 - degree
-    arc(t,r,degree)
-    lt(t,turn)
-    arc(t,r,degree)
+    for i in range(2):
+        arc(t,r,degree)
+        lt(t,180-degree)
 
-def flower(t,r,degree):
-    n = int(180/(90-degree))
+def flower(t,n,r,degree):
     for i in range(n):
         petal(t,r,degree)
-        lt(t,degree)
+        lt(t,360.0/n)
+def move(t, length):
+    pu(t)
+    fd(t, length)
+    pd(t)
 
-flower(bob,100,80)
+#move(bob, -100)
+#flower(bob, 7, 60.0, 60.0)
+
+#move(bob, 100)
+#flower(bob, 10, 40.0, 80.0)
+
+#move(bob, 100)
+#flower(bob, 20, 140.0, 20.0)
+
 #4-3
-    
+pu(bob)
+bk(bob, 130)
+pd(bob)
+def triangle(t, r, angle):
+    y = r * math.sin(angle * math.pi / 180)
+    rt(t, angle)
+    fd(t, r)
+    lt(t, 90+angle)
+    fd(t, 2*y)
+    lt(t, 90+angle)
+    fd(t, r)
+    lt(t, 180-angle)
+
+def ManyTriangle(t,r,n):
+    angle=360.0/n
+    for i in range(n):
+        lt(t,angle)
+        triangle(t,r,angle/2)
+
+def job(t,r,n):
+    ManyTriangle(t,r,n)
+    pu(t)
+    fd(t,r*2+40)
+    pd(t)
+
+size=40
+job(bob,size,5)
+job(bob,size,6)
+job(bob,size,7)
 #4-4
     
 #4-5

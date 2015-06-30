@@ -66,7 +66,7 @@ def isosceles(t, r, angle):
 # create the world and bob
 world = TurtleWorld()
 bob = Turtle()
-bob.delay = 0
+bob.delay = 0.1
 pu(bob)
 bk(bob, 130)
 pd(bob)
