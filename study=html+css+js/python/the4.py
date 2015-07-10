@@ -99,9 +99,9 @@ def move(t, length):
 #flower(bob, 20, 140.0, 20.0)
 
 #4-3
-pu(bob)
-bk(bob, 130)
-pd(bob)
+#pu(bob)
+#bk(bob, 130)
+#pd(bob)
 def triangle(t, r, angle):
     y = r * math.sin(angle * math.pi / 180)
     rt(t, angle)
@@ -125,10 +125,19 @@ def job(t,r,n):
     pd(t)
 
 size=40
-job(bob,size,5)
-job(bob,size,6)
-job(bob,size,7)
+#job(bob,size,5)
+#job(bob,size,6)
+#job(bob,size,7)
 #4-4
-    
+#abcdefghijklmnopqrstuvwxyz
+pu(bob)
+bk(bob, 130)
+pd(bob)
+arc(bob,size,30)
+pu(bob)
+arc(bob,size,120)
+pd(bob)
+arc(bob,size,210)
+#ABCDEFGHIJKLMNOPQRSTUVWXYZ
 #4-5
 
