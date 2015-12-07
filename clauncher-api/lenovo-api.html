@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>lenovo-api</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="styles/NewCss.css">
+		<script type="text/javascript" src="styles/lenovoJs.js"></script>
+		<script type="text/javascript" src="styles/event.js"></script>
+		<script type="text/javascript" src="ajax/request.js"></script>
+	</head>
+	<body>
+		<div class="request">
+			<select id="requestEn" style="width: 70px;" name="requestEn" class="requestEn">
+				<option value="www.lenovouat.cn">联想商城测试服</option>
+				<option value="www.lenovo.com.cn">联想商城正式服</option>
+			</select>
+			<select id="requestIn" style="width: 150px;" name="requestIn" class="requestIn">
+				<option value="#">请选择</option>
+				<option value="/api/products/getinstantpersonalization">猜你又喜欢</option>
+			</select>
+			<div id="parameters" class ="parameters" ></div>
+		 </div>
+			<div class="request">
+				<a href="#" id ="key" class="requestRe" >获取可显示选项</a>
+				<a href="#" id ="requestRe" class="requestRe" >点击展示</a>
+				<p id="requestSh" class = "urlList"></p>
+			</div>
+			<div class="showBox">
+				<div class="showKey" id = "showKey"></div>
+				<p>展示</p>
+				<div class="show" id = "show"></div>
+			</div>
+		<script>
+			var parameters = document.getElementById('parameters');
+			var requestRe = document.getElementById('requestRe');
+			var requestEn = document.getElementById('requestEn');
+			var requestIn = document.getElementById('requestIn');
+			var requestSh = document.getElementById('requestSh');
+			var key = document.getElementById('key');
+			var showKeyD = document.getElementById("showKey");
+			var show = document.getElementById("show");
+			Event.add(requestRe,"click",showDate.inRequest);
+			Event.add(requestIn,"change",apiAdd);
+			Event.add(key,"click",sKey);
+		</script>
+	</body>
+</html>
